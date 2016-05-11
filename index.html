@@ -57,7 +57,7 @@
 
     <script>
       // create layer selector
-      function createSelector(layer) {
+     <!-- function createSelector(layer) {
         var sql = new cartodb.SQL({ user: 'documentation' });
         var $options = $('#layer_selector li');
         $options.click(function(e) {
@@ -74,7 +74,7 @@
           }
           // change the query in the layer to update the map
           layer.setSQL(query);
-        });
+        }); -->
       }
       function main() {
         cartodb.createVis('map', 'https://ssimpkin.cartodb.com/api/v2/viz/126c8e26-17a5-11e6-907b-0e5db1731f59/viz.json', {
