@@ -14,19 +14,20 @@
     var map;
     function init(){
       // initiate leaflet map
-      map = new L.Map('cartodb-map', { 
-        var layerUrl = 'https://ssimpkin.cartodb.com/api/v2/viz/b128db9a-1710-11e6-b2a7-0e674067d321/viz.json';
-        
-        cartodb.createLayer(map, layerUrl)
-  .addTo(map)
-  .on('done', function(layer) {
-  }).on('error', function() {
-    //log the error
-  });
-
+      map = new L.Map('cartodb-map', {
         center: [0,0],
         zoom: 2
       })
+      
+      var layerUrl = 'https://ssimpkin.cartodb.com/api/v2/viz/b128db9a-1710-11e6-b2a7-0e674067d321/viz.json';
+      
+    cartodb.createLayer(map, layerUrl)
+    	.addTo(map)
+    	.on('done', function(layer) {
+
+    	}).on('error', function() {
+      //log the error
+    	});  
     }
   </script>
 </head>
