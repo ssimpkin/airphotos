@@ -24,7 +24,7 @@
     cartodb.createLayer(map, layerUrl)
     	.addTo(map)
     	.on('done', function(layer) {
-
+		layer.getSubLayer(0).set(subLayerOptions);
     	}).on('error', function() {
       //log the error
     	});  
